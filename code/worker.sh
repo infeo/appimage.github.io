@@ -3,10 +3,10 @@
 set -v
 
 
-URL="https://github.com/cryptomator/cryptomator/" #$(cat $1 | head -n 1)
+URL=$(cat $1 | head -n 1)
 echo $URL
 
-INPUTBASENAME="Cryptomator" #$(basename $1)
+INPUTBASENAME=$(basename $1)
 
 # Check if $URL starts with "http", otherwise exit
 if [ x"${URL:0:4}" != xhttp ] ; then
