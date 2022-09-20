@@ -37,7 +37,7 @@ if [ x"${URL:0:22}" == x"https://api.github.com" ] || [ x"${GHURL:0:22}" == x"ht
   fi
   if [ x"" == x"$URL" ] ; then
     echo "Unable to get download URL for the AppImage. Is it really there on GitHub Releases?"
-    wget -q "$GHURL" -O -
+    wget "$GHURL" -O -
     exit 1
   fi
   echo "URL from GitHub API: $URL"
